@@ -1,0 +1,12 @@
+{
+  "name": "io.cronapp.apps.projetodesalav3",
+  "displayName": "Projeto de sala V3",
+  "version": "1.0.0",
+  "description": "Projeto de sala V3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "CronApp IDE",
+  "license": "Apache-2.0"
+}

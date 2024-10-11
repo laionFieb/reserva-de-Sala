@@ -1,0 +1,407 @@
+{
+  "customId": "minhasReservas",
+  "queryName": "minhasReservas",
+  "sourceType": "native",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": null,
+  "entityFullName": null,
+  "connection": "app",
+  "query": {
+    "isEmpty": true,
+    "isRawSql": true,
+    "isNativeQuery": true,
+    "namespace": "app",
+    "sqlContent": "SELECT \r\n    r.ID AS ReservaID,  -- ID da reserva\r\n    r.DATAINICIO,       -- Data de início da reserva\r\n    r.DATAFIM,          -- Data de fim da reserva\r\n    r.DESCRICAO,        -- Descrição da reserva\r\n    r.DIA_TODO,         -- Indicação se é um evento de dia todo\r\n    r.EMAILRESPONSAVELEVENTO,  -- E-mail do responsável pelo evento\r\n    r.EMPRESARESPONSAVELEVENTO, -- Empresa responsável pelo evento\r\n    r.HORAFIM,          -- Hora de fim do evento\r\n    r.HORAINICIO,       -- Hora de início do evento\r\n    r.MESADIRETIVA,     -- Mesa diretiva\r\n    r.NOMEEVENTO,       -- Nome do evento\r\n    r.PROMOTOREVENTO,   -- Promotor do evento\r\n    r.QUANTIDADEPARTICIPANTES,  -- Quantidade de participantes do evento\r\n    r.RESPONSAVELEVENTO,  -- Responsável pelo evento\r\n    r.RESPONSAVELSERVICO, -- Responsável pelo serviço\r\n    r.TELEFONERESPONSAVELEVENTO, -- Telefone do responsável pelo evento\r\n    s.NOME AS NomeSala,  -- Nome da sala, trazido da tabela de sala\r\n    u.UNIDADE AS NomeUnidade,  -- Nome da unidade, trazido da tabela de unidade\r\n    CASE \r\n        WHEN a.STATUS \u003d 1 THEN \u0027Em Aprovação\u0027\r\n        WHEN a.STATUS \u003d 2 THEN \u0027Aprovado\u0027\r\n        WHEN a.STATUS \u003d 3 THEN \u0027Negado\u0027\r\n        ELSE \u0027Status Desconhecido\u0027\r\n    END AS StatusAprovacao,  -- Status de aprovação com legenda\r\n    a.MOTIVO_REPROVACAO,     -- Motivo da reprovação (se houver)\r\n    a.DATA_APROVACAO         -- Data da aprovação\r\nFROM \r\n    reserva r\r\nLEFT JOIN \r\n    aprovacao a ON r.ID \u003d a.FK_RESERVA  -- Join com a tabela de aprovação\r\nLEFT JOIN \r\n    sala s ON r.FK_SALA \u003d s.ID  -- Join com a tabela de sala para trazer o nome da sala\r\nLEFT JOIN \r\n    unidade u ON r.FK_UNIDADE \u003d u.ID  -- Join com a tabela de unidade para trazer o nome da unidade\r\nWHERE \r\n    r.FK_USER \u003d :userId;  -- Filtra as reservas pelo usuário logado\r\n",
+    "multiTenant": false,
+    "paginatorAutomatic": false,
+    "pagination": false
+  },
+  "queryParamsValues": [
+    {
+      "fieldName": "userId;",
+      "fieldValue": {
+        "type": "server",
+        "blocklyMethod": "userLogged",
+        "blocklyClass": "blockly.UserControl",
+        "blocklyLanguage": "java",
+        "blocklyParams": [],
+        "blocklyJson": {
+          "namespace": "blockly.UserControl",
+          "sourcePath": "src/main/java/blockly/UserControl.blockly",
+          "language": "java",
+          "methods": [
+            {
+              "name": "signUp",
+              "hasReturn": "true",
+              "params": [
+                "username",
+                "email",
+                "password"
+              ]
+            },
+            {
+              "name": "resetPassword",
+              "hasReturn": "true",
+              "params": [
+                "email",
+                "isMobile"
+              ]
+            },
+            {
+              "name": "usuarioDefault",
+              "hasReturn": "false",
+              "params": []
+            },
+            {
+              "name": "userLogged",
+              "hasReturn": "true",
+              "params": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "ReservaID": null,
+    "DATAINICIO": null,
+    "DATAFIM": null,
+    "DESCRICAO": null,
+    "DIA_TODO": null,
+    "EMAILRESPONSAVELEVENTO": null,
+    "EMPRESARESPONSAVELEVENTO": null,
+    "HORAFIM": null,
+    "HORAINICIO": null,
+    "MESADIRETIVA": null,
+    "NOMEEVENTO": null,
+    "PROMOTOREVENTO": null,
+    "QUANTIDADEPARTICIPANTES": null,
+    "RESPONSAVELEVENTO": null,
+    "RESPONSAVELSERVICO": null,
+    "TELEFONERESPONSAVELEVENTO": null,
+    "NomeSala": null,
+    "NomeUnidade": null,
+    "StatusAprovacao": null,
+    "MOTIVO_REPROVACAO": null,
+    "DATA_APROVACAO": null
+  },
+  "defaultValuesProperties": {
+    "ReservaID": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.ID",
+      "updatable": false,
+      "autogenerated": false,
+      "index": 1,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "DATAINICIO": {
+      "key": true,
+      "nullable": true,
+      "type": "DateTime",
+      "path": "r.DATAINICIO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 26,
+      "scale": 6,
+      "precision": 26,
+      "nativeType": "93"
+    },
+    "DATAFIM": {
+      "key": false,
+      "nullable": true,
+      "type": "DateTime",
+      "path": "r.DATAFIM",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 26,
+      "scale": 6,
+      "precision": 26,
+      "nativeType": "93"
+    },
+    "DESCRICAO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.DESCRICAO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "DIA_TODO": {
+      "key": false,
+      "nullable": true,
+      "type": "Boolean",
+      "path": "r.DIA_TODO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 5,
+      "scale": 0,
+      "precision": 1,
+      "nativeType": "16"
+    },
+    "EMAILRESPONSAVELEVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.EMAILRESPONSAVELEVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "EMPRESARESPONSAVELEVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.EMPRESARESPONSAVELEVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "HORAFIM": {
+      "key": false,
+      "nullable": true,
+      "type": "Time",
+      "path": "r.HORAFIM",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 8,
+      "scale": 0,
+      "precision": 8,
+      "nativeType": "92"
+    },
+    "HORAINICIO": {
+      "key": false,
+      "nullable": true,
+      "type": "Time",
+      "path": "r.HORAINICIO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 8,
+      "scale": 0,
+      "precision": 8,
+      "nativeType": "92"
+    },
+    "MESADIRETIVA": {
+      "key": false,
+      "nullable": true,
+      "type": "Boolean",
+      "path": "r.MESADIRETIVA",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 5,
+      "scale": 0,
+      "precision": 1,
+      "nativeType": "16"
+    },
+    "NOMEEVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.NOMEEVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "PROMOTOREVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.PROMOTOREVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "QUANTIDADEPARTICIPANTES": {
+      "key": false,
+      "nullable": true,
+      "type": "Int32",
+      "path": "r.QUANTIDADEPARTICIPANTES",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 11,
+      "scale": 0,
+      "precision": 10,
+      "nativeType": "4"
+    },
+    "RESPONSAVELEVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.RESPONSAVELEVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "RESPONSAVELSERVICO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.RESPONSAVELSERVICO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "TELEFONERESPONSAVELEVENTO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "r.TELEFONERESPONSAVELEVENTO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "NomeSala": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "s.NOME",
+      "updatable": false,
+      "autogenerated": false,
+      "index": 17,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "NomeUnidade": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "u.UNIDADE",
+      "updatable": false,
+      "autogenerated": false,
+      "index": 18,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "StatusAprovacao": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "CASE WHEN a.STATUS \u003d 1 THEN \u0027Em Aprovação\u0027 WHEN a.STATUS \u003d 2 THEN \u0027Aprovado\u0027 WHEN a.STATUS \u003d 3 THEN \u0027Negado\u0027 ELSE \u0027Status Desconhecido\u0027 END",
+      "updatable": false,
+      "autogenerated": false,
+      "index": 19,
+      "length": 19,
+      "scale": 0,
+      "precision": 19,
+      "nativeType": "12"
+    },
+    "MOTIVO_REPROVACAO": {
+      "key": false,
+      "nullable": true,
+      "type": "String",
+      "path": "a.MOTIVO_REPROVACAO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 2147483647,
+      "scale": 0,
+      "precision": 2147483647,
+      "nativeType": "12"
+    },
+    "DATA_APROVACAO": {
+      "key": false,
+      "nullable": true,
+      "type": "DateTime",
+      "path": "a.DATA_APROVACAO",
+      "updatable": false,
+      "autogenerated": false,
+      "length": 26,
+      "scale": 6,
+      "precision": 26,
+      "nativeType": "93"
+    }
+  },
+  "security": {
+    "ReservaID": null,
+    "DATAINICIO": null,
+    "DATAFIM": null,
+    "DESCRICAO": null,
+    "DIA_TODO": null,
+    "EMAILRESPONSAVELEVENTO": null,
+    "EMPRESARESPONSAVELEVENTO": null,
+    "HORAFIM": null,
+    "HORAINICIO": null,
+    "MESADIRETIVA": null,
+    "NOMEEVENTO": null,
+    "PROMOTOREVENTO": null,
+    "QUANTIDADEPARTICIPANTES": null,
+    "RESPONSAVELEVENTO": null,
+    "RESPONSAVELSERVICO": null,
+    "TELEFONERESPONSAVELEVENTO": null,
+    "NomeSala": null,
+    "NomeUnidade": null,
+    "StatusAprovacao": null,
+    "MOTIVO_REPROVACAO": null,
+    "DATA_APROVACAO": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query767081/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

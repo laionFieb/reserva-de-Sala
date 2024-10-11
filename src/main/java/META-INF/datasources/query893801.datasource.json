@@ -1,0 +1,226 @@
+{
+  "customId": "reservaDataDiaTodo",
+  "queryName": "Reserva com Validação de Data de Dia Todo",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Reserva",
+  "entityFullName": "app.entity.Reserva",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "Reserva",
+        "alias": "r",
+        "namespace": "app.entity.Reserva"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "r"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": {
+      "type": "server",
+      "blocklyMethod": "validar",
+      "blocklyClass": "blockly.ReservaControler",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "04597959",
+          "name": "dadoReserva\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.ReservaControler",
+        "sourcePath": "src/main/java/blockly/ReservaControler.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "validar",
+            "hasReturn": "false",
+            "params": [
+              "dadoReserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "verificarDiaTodo",
+            "hasReturn": "false",
+            "params": [
+              "dadosReserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "verificarData",
+            "hasReturn": "false",
+            "params": [
+              "reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "nomeEvento": null,
+    "dataInicio": null,
+    "dataFim": null,
+    "horaInicio": null,
+    "horaFim": null,
+    "promotorEvento": null,
+    "responsavelEvento": null,
+    "emailResponsavelEvento": null,
+    "empresaResponsavelEvento": null,
+    "telefoneResponsavelEvento": null,
+    "quantidadeParticipantes": null,
+    "descricao": null,
+    "mesaDiretiva": null,
+    "responsavelServico": null,
+    "user": {
+      "type": "server",
+      "blocklyMethod": "userLogged",
+      "blocklyClass": "blockly.UserControl",
+      "blocklyLanguage": "java",
+      "blocklyParams": [],
+      "blocklyJson": {
+        "namespace": "blockly.UserControl",
+        "sourcePath": "src/main/java/blockly/UserControl.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "signUp",
+            "hasReturn": "true",
+            "params": [
+              "username",
+              "email",
+              "password"
+            ]
+          },
+          {
+            "name": "resetPassword",
+            "hasReturn": "true",
+            "params": [
+              "email",
+              "isMobile"
+            ]
+          },
+          {
+            "name": "userLogged",
+            "hasReturn": "true",
+            "params": []
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    },
+    "sala": null,
+    "dia_todo": null,
+    "unidade": null,
+    "user_name": null,
+    "sala_nome": null,
+    "unidade_unidade": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "nomeEvento": null,
+    "dataInicio": null,
+    "dataFim": null,
+    "horaInicio": null,
+    "horaFim": null,
+    "promotorEvento": null,
+    "responsavelEvento": null,
+    "emailResponsavelEvento": null,
+    "empresaResponsavelEvento": null,
+    "telefoneResponsavelEvento": null,
+    "quantidadeParticipantes": null,
+    "descricao": null,
+    "mesaDiretiva": null,
+    "responsavelServico": null,
+    "user": null,
+    "sala": null,
+    "dia_todo": null,
+    "unidade": null,
+    "user_name": null,
+    "sala_nome": null,
+    "unidade_unidade": null
+  },
+  "security": {
+    "id": null,
+    "nomeEvento": null,
+    "dataInicio": null,
+    "dataFim": null,
+    "horaInicio": null,
+    "horaFim": null,
+    "promotorEvento": null,
+    "responsavelEvento": null,
+    "emailResponsavelEvento": null,
+    "empresaResponsavelEvento": null,
+    "telefoneResponsavelEvento": null,
+    "quantidadeParticipantes": null,
+    "descricao": null,
+    "mesaDiretiva": null,
+    "responsavelServico": null,
+    "user": null,
+    "sala": null,
+    "dia_todo": null,
+    "unidade": null,
+    "user_name": null,
+    "sala_nome": null,
+    "unidade_unidade": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query893801/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}

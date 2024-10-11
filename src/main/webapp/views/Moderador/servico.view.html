@@ -1,0 +1,129 @@
+<div id="starter" ng-init="" ng-destroy="" data-component="crn-start" screen-params="" primary-datasource="Servico">
+<h1 class="component-holder text-left h3 title" xattr-position="text-left" xattr-type="h3" data-component="crn-text-component" id="crn-text-component-25322">Serviço</h1>
+<datasource data-component="crn-datasource" filter="" name="Servico" entity="app.Servico" keys="_objectKey" rows-per-page="100" class="" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}]" condition="{&quot;maxRecord&quot;:100,&quot;params&quot;:[],&quot;expression&quot;:{&quot;type&quot;:&quot;OR&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;%&quot;,&quot;left&quot;:&quot;descricao&quot;,&quot;right&quot;:&quot;{{vars.search|raw}}&quot;,&quot;args&quot;:[]}]}}" lazy="true"></datasource>
+
+        <div role="search" ng-hide="Servico.inserting || Servico.editing" data-component="crn-textinput" id="crn-datasource-filter-general25322" class="">
+            <div class="form-group">
+                <label for="textinput-filter" class="">{{"template.crud.search" | translate}}</label>
+                <input type="text" ng-model="vars.search" id="textinput-filter" class="form-control k-textbox" value="" placeholder="{{'template.crud.search' | translate}}">
+            </div>
+        </div>
+
+<section ng-hide="Servico.editing || Servico.inserting" class="component-holder ng-binding ng-scope" data-component="crn-cron-grid" id="cron-crn-grid-search">
+    <cron-grid options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Servico&quot;,&quot;entity&quot;:&quot;app.Servico&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Servico&quot;,&quot;customId&quot;:&quot;Servico&quot;,&quot;name&quot;:&quot;Servico&quot;,&quot;customQueryName&quot;:&quot;app.Servico&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Servico&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;type&quot;:&quot;entity&quot;,&quot;hasError&quot;:false},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;id&quot;:&quot;app.Servico&quot;},&quot;allowPaging&quot;:true,&quot;allowSorting&quot;:true,&quot;allowGrouping&quot;:false,&quot;allowSelectionTotalPageToShow&quot;:true,&quot;allowRefreshGrid&quot;:true,&quot;allowSelectionRow&quot;:true,&quot;hideModalButtons&quot;:true,&quot;editable&quot;:&quot;datasource&quot;,&quot;columns&quot;:[{&quot;dataType&quot;:&quot;Database&quot;,&quot;field&quot;:&quot;descricao&quot;,&quot;headerText&quot;:&quot;Descricao&quot;,&quot;type&quot;:&quot;string&quot;,&quot;sortable&quot;:true,&quot;filterable&quot;:true,&quot;format&quot;:&quot;&quot;,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[],&quot;buttonColumns&quot;:[]},{&quot;dataType&quot;:&quot;Command&quot;,&quot;headerText&quot;:&quot;{{ 'Action' | translate }}&quot;,&quot;sortable&quot;:false,&quot;filterable&quot;:false,&quot;visible&quot;:true,&quot;visibleCrud&quot;:true,&quot;linkParentType&quot;:&quot;screen&quot;,&quot;linkParentLoadIfEmpty&quot;:false,&quot;command&quot;:&quot;edit|destroy&quot;,&quot;required&quot;:false,&quot;showAsImage&quot;:false,&quot;inputType&quot;:&quot;default&quot;,&quot;comboboxOptions&quot;:{&quot;dataSourceScreen&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false},&quot;aggregates&quot;:[],&quot;widthDevices&quot;:[],&quot;buttonColumns&quot;:[]}],&quot;toolBarButtons&quot;:[{&quot;type&quot;:&quot;Native&quot;,&quot;title&quot;:&quot;create&quot;}],&quot;details&quot;:[],&quot;groupings&quot;:[],&quot;fillDatasource&quot;:false,&quot;enableModalSaveAdd&quot;:false}" ng-model="vars.grid25322" class="" style="" scrollable="false">
+    </cron-grid>
+</section>
+
+<div data-component="crn-form" id="crn-form-form-Servico-25322">
+    <section class="form" ng-show="Servico.editing || Servico.inserting">
+        <form crn-datasource="Servico" class="">
+            <div class="tool-bar" ng-hide="datasource.editing || datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startInserting">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startInserting()" aria-label="{{'StartInserting' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-plus" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-startEditing">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.startEditing()" aria-label="{{'startEditing' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-pencil" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-previous">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.previous()" ng-disabled="!datasource.hasPrevious()" aria-label="{{'Before' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-left" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-next">
+                    <button class="btn k-button btn-block btn-default btn-fab" ng-click="datasource.next()" ng-disabled="!datasource.hasNext()" aria-label="{{'Next' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled="">
+                        <i class="glyphicon glyphicon-chevron-right" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="crn-button-remove">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.remove()" aria-label="{{'Remove' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-remove" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
+            <div class="active-bar" ng-hide="!datasource.editing &amp;&amp; !datasource.inserting">
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_post_25322">
+                    <button class="btn k-button btn-block btn-success btn-fab" ng-click="datasource.post()" aria-label="{{'SaveChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-success" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ok" icon-theme=""></i>
+                    </button>
+                </div>
+                <div class="component-holder ng-scope" data-component="crn-button" id="btn_crud_cancel_25322">
+                    <button class="btn k-button btn-block btn-danger btn-fab" ng-click="datasource.cancel()" aria-label="{{'CancelChanges' | translate}}" xattr-fullsize="btn-block" xattr-theme="btn-danger" xattr-disabled="">
+                        <i class="glyphicon glyphicon-ban-circle" icon-theme=""></i>
+                    </button>
+                </div>
+            </div>
+            <br>
+            <div class="crn-fieldset" ng-disabled="!datasource.editing &amp;&amp; !datasource.inserting">
+
+
+                    <div data-component="crn-textinput" id="crn-textinput-descricao-25322" class="">
+                        <div class="form-group">
+                                <label for="textinput-descricao" class="">Nome do Serviço</label>
+                                <input type="text" ng-model="Servico.active.descricao" class="form-control k-textbox" id="textinput-descricao" placeholder="Nome do Serviço" mask="" mask-placeholder="" ng-required="false">
+                        </div>
+                    </div>
+                <!-- NtoN  -->
+
+                    <datasource data-component="crn-datasource" name="Tipo_AgendaServico" entity="app.Tipo_AgendaServico" keys="_objectKey" dependent-lazy-post="Servico" rows-per-page="100" parameters="servico={{Servico.active._objectKey|raw}}" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;tipo_Agenda&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;tipo_Agenda_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false}]" lazy="true"></datasource>
+
+                        <datasource data-component="crn-datasource" name="Tipo_AgendaNCombo" entity="app.Tipo_Agenda" keys="_objectKey" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}]"></datasource>
+                        <div class="component-holder ng-binding ng-scope " data-component="crn-enterprise-combobox-multiple" ng-show="datasource.editing || datasource.inserting">
+                            <div class="form-group">
+                                <label for="comboboxTipo_Agenda-container">Tipo de Agenda</label>
+                                <cron-multi-select options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Tipo_AgendaNCombo&quot;,&quot;entity&quot;:&quot;app.Tipo_Agenda&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Tipo_Agenda&quot;,&quot;customId&quot;:&quot;Tipo_Agenda&quot;,&quot;name&quot;:&quot;Tipo_AgendaNCombo&quot;,&quot;customQueryName&quot;:&quot;app.Tipo_Agenda&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Tipo_Agenda&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;type&quot;:&quot;entity&quot;,&quot;hasError&quot;:false},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;id&quot;:&quot;app.Tipo_Agenda&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nome&quot;,&quot;dataValueField&quot;:&quot;_objectKey&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;name&quot;:&quot;Tipo_AgendaServico&quot;,&quot;entity&quot;:&quot;app.Tipo_AgendaServico&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Tipo_AgendaServico&quot;,&quot;customId&quot;:&quot;Tipo_AgendaServico&quot;,&quot;name&quot;:&quot;Tipo_AgendaServico&quot;,&quot;customQueryName&quot;:&quot;app.Tipo_AgendaServico&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Tipo_AgendaServico&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;tipo_Agenda&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;tipo_Agenda_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false}],&quot;type&quot;:&quot;entity&quot;,&quot;hasError&quot;:false},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;tipo_Agenda&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true},{&quot;name&quot;:&quot;tipo_Agenda_nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;servico_descricao&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false}],&quot;id&quot;:&quot;app.Tipo_AgendaServico&quot;},&quot;relationField&quot;:&quot;tipo_Agenda&quot;,&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;changeCursor&quot;:true,&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false}" ng-required="false" id="comboboxTipo_Agenda" name="comboboxTipo_Agenda" ng-model="Tipo_AgendaServico.data" class="crn-select form-control" style="">
+                                </cron-multi-select>
+                            </div>
+                        </div>
+                <!-- NtoN  end-->
+            </div>
+        </form>
+    </section>
+    <section class="form" ng-show="Servico.editing || Servico.inserting">
+        <form>
+            <div>
+                <!-- OneToN -->
+                    <!--query filter 1toN -->
+
+                    <!-- query filter 1toN end-->
+                    
+                    <!-- teste -->
+                    
+                    
+                <!-- OneToOne  end -->
+            </div>
+        </form>
+    </section>
+</div>
+
+
+    <div class="modal fade" id="modalTipo_AgendaServicoGrid">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="{{'Home.view.Close' | translate}}"><span aria-hidden="true">×</span></button>
+                        <h3 class="modal-title">Tipo_AgendaServico</h3>
+                    </div>
+                    <div class="modal-body">
+                        <div class="list-group list-group-sm row">
+                                        <datasource name="Tipo_AgendaGridForCombo" entity="app.Tipo_Agenda" keys="_objectKey" rows-per-page="100" schema="[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}]" lazy="true"></datasource>
+                                        <div data-component="crn-enterprise-dynamic-combobox" id="crn-combobox-Tipo_AgendaServicoGrid.active.tipo_Agenda-25322" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="form-group">
+                                                <label for="combobox-modal-tipo_Agenda-25322" class="">Tipo  Agenda</label>
+                                                <cron-dynamic-select id="combobox-modal-tipo_Agenda-25322" name="combobox-modal-tipo_Agenda-25322" options="{&quot;dataSourceScreen&quot;:{&quot;name&quot;:&quot;Tipo_AgendaGridForCombo&quot;,&quot;entity&quot;:&quot;app.Tipo_Agenda&quot;,&quot;entityDataSource&quot;:{&quot;id&quot;:&quot;app.Tipo_Agenda&quot;,&quot;customId&quot;:&quot;Tipo_Agenda&quot;,&quot;name&quot;:&quot;Tipo_AgendaGridForCombo&quot;,&quot;customQueryName&quot;:&quot;app.Tipo_Agenda&quot;,&quot;paramValues&quot;:[],&quot;entityFullName&quot;:&quot;app.entity.Tipo_Agenda&quot;,&quot;schemaFields&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;type&quot;:&quot;entity&quot;,&quot;hasError&quot;:false},&quot;schema&quot;:[{&quot;name&quot;:&quot;id&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;nome&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:true,&quot;notEmpty&quot;:false,&quot;key&quot;:false},{&quot;name&quot;:&quot;_objectKey&quot;,&quot;type&quot;:&quot;String&quot;,&quot;nullable&quot;:false,&quot;notEmpty&quot;:false,&quot;key&quot;:true}],&quot;id&quot;:&quot;app.Tipo_Agenda&quot;},&quot;filter&quot;:&quot;contains&quot;,&quot;dataTextField&quot;:&quot;nome&quot;,&quot;dataValueField&quot;:&quot;_objectKey&quot;,&quot;dynamic&quot;:true,&quot;valuePrimitive&quot;:true,&quot;relationDataSource&quot;:{&quot;entityDataSource&quot;:{&quot;hasError&quot;:false},&quot;schema&quot;:[]},&quot;staticDataSource&quot;:[],&quot;filterKeyValues&quot;:{&quot;&quot;:&quot;&quot;,&quot;contains&quot;:&quot;Contendo&quot;,&quot;startswith&quot;:&quot;Iniciando com&quot;,&quot;endswith&quot;:&quot;Final com&quot;},&quot;changeCursor&quot;:true,&quot;customTemplate&quot;:false,&quot;fillDatasource&quot;:false}" ng-model="Tipo_AgendaServicoGrid.active.tipo_Agenda" class="crn-select form-control">
+                                                </cron-dynamic-select>
+                                            </div>
+                                        </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

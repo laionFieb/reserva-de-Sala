@@ -1,0 +1,148 @@
+{
+  "customId": "ReservaTipoAgendaSuporte",
+  "queryName": "ReservaTipoAgendaSuporte",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "ReservaTipo_Agenda",
+  "entityFullName": "app.entity.ReservaTipo_Agenda",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "ReservaTipo_Agenda",
+        "alias": "r",
+        "namespace": "app.entity.ReservaTipo_Agenda"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "r"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": {
+      "type": "server",
+      "blocklyMethod": "criarAprovacao",
+      "blocklyClass": "blockly.ReservaControler",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "04597959",
+          "name": "dadoReserva\u0026lt;app.entity.Reserva\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.ReservaControler",
+        "sourcePath": "src/main/java/blockly/ReservaControler.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "validar",
+            "hasReturn": "false",
+            "params": [
+              "dadoReserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "verificarDiaTodo",
+            "hasReturn": "false",
+            "params": [
+              "dadosReserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "criarAprovacao",
+            "hasReturn": "false",
+            "params": [
+              "dadoReserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "enviarEmail",
+            "hasReturn": "false",
+            "params": [
+              "enviarEmail\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          },
+          {
+            "name": "verificarData",
+            "hasReturn": "false",
+            "params": [
+              "reserva\u0026lt;app.entity.Reserva\u0026gt;"
+            ]
+          }
+        ]
+      }
+    },
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "reserva": null,
+    "tipo_Agenda": null,
+    "reserva_nomeEvento": null,
+    "tipo_Agenda_nome": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "reserva": null,
+    "tipo_Agenda": null,
+    "reserva_nomeEvento": null,
+    "tipo_Agenda_nome": null
+  },
+  "security": {
+    "id": null,
+    "reserva": null,
+    "tipo_Agenda": null,
+    "reserva_nomeEvento": null,
+    "tipo_Agenda_nome": null
+  },
+  "calcFields": {},
+  "calcFieldsSecurity": {},
+  "calcFieldsProperties": {},
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query351692/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
