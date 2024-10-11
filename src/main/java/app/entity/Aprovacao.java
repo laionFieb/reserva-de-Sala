@@ -23,7 +23,7 @@ import cronapp.framework.core.persistence.*;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Aprovacao")
-@CronappTable(role=CronappTableRole.CLASS)
+@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
 public class Aprovacao implements Serializable {
     /**
     * UID da classe, necessário na serialização

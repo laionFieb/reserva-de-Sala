@@ -23,7 +23,7 @@ import cronapp.framework.core.persistence.*;
 @XmlRootElement
 @CronappSecurity
 @JsonFilter("app.entity.Reserva")
-@CronappTable(role=CronappTableRole.ASSOCIATION_CLASS)
+@CronappTable(role=CronappTableRole.CLASS)
 public class Reserva implements Serializable {
     /**
     * UID da classe, necessário na serialização

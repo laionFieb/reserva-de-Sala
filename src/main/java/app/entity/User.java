@@ -16,11 +16,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import cronapp.framework.core.persistence.*;
 
 /**
-* Classe que representa a tabela USER
+* Classe que representa a tabela USUARIOS
 * @generated
 */
 @javax.persistence.Entity
-@javax.persistence.Table(name = "\"USER\"")
+@javax.persistence.Table(name = "\"USUARIOS\"")
 @XmlRootElement
 @CronappSecurity(post = "Administrators", get = "Administrators", delete = "Administrators", put = "Administrators")
 @JsonFilter("app.entity.User")
