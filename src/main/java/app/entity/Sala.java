@@ -86,6 +86,15 @@ public class Sala implements Serializable {
 
 
     /**
+    * @generated
+    */
+    @ManyToOne
+    @JoinColumn(name="fk_responsavel_Sala", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+        
+        private Responsavel_Sala responsavel_Sala;
+
+
+    /**
     * Construtor
     * @generated
     */
@@ -198,6 +207,24 @@ public class Sala implements Serializable {
     */
     public Sala setUnidade(Unidade unidade) {
         this.unidade = unidade;
+        return this;
+    }
+    /**
+    * Obtém responsavel_Sala
+    * return responsavel_Sala
+    * @generated
+    */
+    public Responsavel_Sala getResponsavel_Sala() {
+        return this.responsavel_Sala;
+    }
+
+    /**
+    * Define responsavel_Sala
+    * @param responsavel_Sala responsavel_Sala
+    * @generated
+    */
+    public Sala setResponsavel_Sala(Responsavel_Sala responsavel_Sala) {
+        this.responsavel_Sala = responsavel_Sala;
         return this;
     }
 

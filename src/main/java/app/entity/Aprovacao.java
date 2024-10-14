@@ -81,9 +81,9 @@ public class Aprovacao implements Serializable {
     * @generated
     */
     @ManyToOne
-    @JoinColumn(name="fk_user", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
+    @JoinColumn(name="fk_responsavel_Sala", nullable = true, referencedColumnName = "id", insertable=true, updatable=true)
         
-        private User user;
+        private Responsavel_Sala responsavel_Sala;
 
 
     /**
@@ -184,21 +184,21 @@ public class Aprovacao implements Serializable {
         return this;
     }
     /**
-    * Obtém user
-    * return user
+    * Obtém responsavel_Sala
+    * return responsavel_Sala
     * @generated
     */
-    public User getUser() {
-        return this.user;
+    public Responsavel_Sala getResponsavel_Sala() {
+        return this.responsavel_Sala;
     }
 
     /**
-    * Define user
-    * @param user user
+    * Define responsavel_Sala
+    * @param responsavel_Sala responsavel_Sala
     * @generated
     */
-    public Aprovacao setUser(User user) {
-        this.user = user;
+    public Aprovacao setResponsavel_Sala(Responsavel_Sala responsavel_Sala) {
+        this.responsavel_Sala = responsavel_Sala;
         return this;
     }
 
