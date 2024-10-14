@@ -28,6 +28,7 @@
         <class>app.entity.Minhas_Reservas</class>
         <class>app.entity.ApplicationUser</class>
         <class>app.entity.ReservaHorario</class>
+        <class>app.entity.SalaResponsavel_Sala</class>
         <class>app.entity.Tipo_Agenda</class>
         <class>app.entity.UnidadeTipo_Agenda</class>
         <class>app.entity.Login</class>
