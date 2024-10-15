@@ -81,7 +81,7 @@
                                 <label for="textinput-dataFim" class="">Data e Hora Fim</label>
                                 <input type="datetime-local" ng-model="Reserva.active.dataFim" class="form-control k-textbox" id="textinput-dataFim" placeholder="Data Fim" mask="DD/MM/YYYY HH:mm" mask-placeholder="" ng-required="false" ng-change="" ng-blur="cronapi.server('blockly.VerificarDataFim.Executar').run(ReservaArquivo)">
                         </div>
-                    </div><div class="component-holder ng-scope col-sm-12 col-lg-2  col-md-2" data-component="crn-button" id="crn-button-561314"><button class="btn k-button btn-block btn-default" ng-click="cronapi.server('blockly.ReservaControler.verificarDisnponibilidade').run(Sala)" xattr-fullsize="btn-block" xattr-theme="btn-default" xattr-disabled=""><i class="glyphicon glyphicon-home" icon-theme=""></i> <span class="" text-theme="">Verificar Horário</span></button></div>
+                    </div><div class="component-holder ng-scope col-sm-12 col-md-3 col-lg-3" data-component="crn-button" id="crn-button-561314"><button class="btn k-button btn-block btn-primary" ng-click="cronapi.server('blockly.ReservaControler.verificarDisnponibilidade').run(Sala)" xattr-fullsize="btn-block" xattr-theme="btn-primary" xattr-disabled=""><i class="glyphicon glyphicon-ok text-color-default" icon-theme="text-color-default"></i> <span class="" text-theme="">Verificar Disponibilidade</span></button></div>
 
 
                     <div class="component-holder ng-scope col-md-12 col-sm-12 col-lg-12" data-component="crn-one-container" id="crn-one-container-87695"><div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12 active" data-container="true" data-replace="true"></div></div>
@@ -92,8 +92,8 @@
 
                     <div data-component="crn-textinput" id="crn-textinput-promotorEvento-92240" class="col-md-4 col-sm-12  col-lg-4">
                         <div class="form-group">
-                                <label for="textinput-promotorEvento" class="">Promotor do Evento</label>
-                                <input type="text" ng-model="Reserva.active.promotorEvento" class="form-control k-textbox" id="textinput-promotorEvento" placeholder="Promotor do Evento" mask="" mask-placeholder="" ng-required="false" ng-click="cronapi.client('js.blockly.UsuarioDefault.usuarioDefault').run(Sala)" ng-init="">
+                                <label for="textinput-promotorEvento" class="">Solicitante do Evento</label>
+                                <input type="text" ng-model="Reserva.active.promotorEvento" class="form-control k-textbox" id="textinput-promotorEvento" placeholder="Solicitante do Evento" mask="" mask-placeholder="" ng-required="false" ng-click="cronapi.client('js.blockly.UsuarioDefault.usuarioDefault').run(Sala)" ng-init="">
                         </div>
                     </div>
 
