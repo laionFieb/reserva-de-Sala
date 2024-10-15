@@ -13,8 +13,8 @@ public static final int TIMEOUT = 300;
 
 /**
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static void FecharModal() throws Exception {
@@ -32,18 +32,17 @@ public static void FecharModal() throws Exception {
  *
  * @param idAprovacao
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static void aprovarReserva(@ParamMetaData(description = "idAprovacao", id = "a33419b6") Var idAprovacao) throws Exception {
   new Callable<Var>() {
 
    public Var call() throws Exception {
-    cronapi.database.Operations.execute(Var.valueOf("app.entity.Aprovacao"), Var.valueOf("update \n	Aprovacao  \nset \n	status = :status, \n	data_Aprovacao = :data_Aprovacao, \n	user = :user \nwhere \n	id = :id"),Var.valueOf("status",
+    cronapi.database.Operations.execute(Var.valueOf("app.entity.Aprovacao"), Var.valueOf("update \n	Aprovacao  \nset \n	status = :status, \n	data_Aprovacao = :data_Aprovacao \nwhere \n	id = :id"),Var.valueOf("status",
     Var.valueOf(2)),Var.valueOf("data_Aprovacao",
-    cronapi.dateTime.Operations.getNow()),Var.valueOf("user",
-    cronapi.util.Operations.getCurrentUserName()),Var.valueOf("id",
+    cronapi.dateTime.Operations.getNow()),Var.valueOf("id",
     cronapi.screen.Operations.getValueOfField(
     Var.valueOf("Aprovacao.active.AprovacaoID"))));
     atualizarFonte();
@@ -54,8 +53,8 @@ public static void aprovarReserva(@ParamMetaData(description = "idAprovacao", id
 
 /**
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static void atualizarFonte() throws Exception {
@@ -72,8 +71,8 @@ public static void atualizarFonte() throws Exception {
 
 /**
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static void exibirModalNegar() throws Exception {
@@ -91,8 +90,8 @@ public static void exibirModalNegar() throws Exception {
  *
  * @param status
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static Var getStatus(@ParamMetaData(description = "status", id = "92a895ed") Var status) throws Exception {
@@ -133,8 +132,8 @@ Var.valueOf("Inválido");
  *
  * @param aprovacaoDado<app.entity.Aprovacao>
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static Var getStatusFonte(@ParamMetaData(description = "aprovacaoDado", id = "bd910511") Var aprovacaoDado) throws Exception {
@@ -156,20 +155,19 @@ Var.valueOf("status"))));
  *
  * @param idAprovacao
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static void motivoReprov(@ParamMetaData(description = "idAprovacao", id = "de1f0386") Var idAprovacao) throws Exception {
   new Callable<Var>() {
 
    public Var call() throws Exception {
-    cronapi.database.Operations.execute(Var.valueOf("app.entity.Aprovacao"), Var.valueOf("update \n	Aprovacao  \nset \n	motivo_reprovacao = :motivo_reprovacao, \n	data_Aprovacao = :data_Aprovacao, \n	status = :status, \n	user = :user \nwhere \n	id = :id"),Var.valueOf("motivo_reprovacao",
+    cronapi.database.Operations.execute(Var.valueOf("app.entity.Aprovacao"), Var.valueOf("update \n	Aprovacao  \nset \n	motivo_reprovacao = :motivo_reprovacao, \n	data_Aprovacao = :data_Aprovacao, \n	status = :status \nwhere \n	id = :id"),Var.valueOf("motivo_reprovacao",
     cronapi.screen.Operations.getValueOfField(
     Var.valueOf("vars.input6701"))),Var.valueOf("data_Aprovacao",
     cronapi.dateTime.Operations.getNow()),Var.valueOf("status",
-    Var.valueOf(3)),Var.valueOf("user",
-    cronapi.util.Operations.getCurrentUserName()),Var.valueOf("id",
+    Var.valueOf(3)),Var.valueOf("id",
     cronapi.screen.Operations.getValueOfField(
     Var.valueOf("Aprovacao.active.AprovacaoID"))));
     atualizarFonte();
@@ -186,8 +184,8 @@ public static void motivoReprov(@ParamMetaData(description = "idAprovacao", id =
  *
  * @param idAprovacao
  *
- * @author Breno Albergaria Argolo
- * @since 10/10/2024, 16:34:38
+ * @author Ebert Castro
+ * @since 15/10/2024, 11:27:39
  *
  */
 public static Var negarReserva(@ParamMetaData(description = "idAprovacao", id = "a33419b6") Var idAprovacao) throws Exception {
