@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><blockly audit="false" blocklyType="JAVA" bpmnAble="false" formTarget="src/main/webapp/views/logged/reserva.view.html" functionCategory="" library="false" linkHelp="" multilayer="false" resourceType="JAVA" ruleDescription="enviarEmailReuniao" ruleName="enviarEmailReuniao" ruleSynchronous="false" ruleTimeout="300" ruleType="I" showAsFunction="false" soap="false" swagger="false">
+  <metadata scale="0.6944444444444445" scrollx="195.2500001231831" scrolly="-22.000000349680334" target="*nuI0l]Tl2gH?2ERBzvW"/>
+  <block asynccall="false" colour="#fca03b" datasourcetype="" id="*nuI0l]Tl2gH?2ERBzvW" origintype="procedures_defnoreturn" output="false" tooltip="Cria uma função que não tem retorno." type="procedures_defnoreturn" x="-112" y="53">
+    <field customattributes="" name="NAME">enviarEmail</field>
+    <statement name="STACK">
+      <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="H.(]NWd5~h/,ntH|4doZ" origintype="variables_set" output="false" tooltip="Define esta variável para o valor da entrada." type="variables_set">
+        <field customattributes="" name="VAR">emailSolicitante</field>
+        <value name="VALUE">
+          <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="FX)b(%e`~M$%z$`9uiKT" multilayer="false" namespace="cronapi.screen.Operations.getValueOfField" origintype="procedures_callreturn" output="true" returntype="ObjectType.JSON" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EObter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20para%20obter%20valor%20do%20campo%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Campo%20:%20Texto%3C/span%3E%3Cbr%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22return%22%3E%3Cstrong%3ERetorno:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20Json%3C/span%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('http://172.16.2.97:80/help?type=blockly&amp;amp;id=cronapi.screen.Operations.getValueOfField','cronapi.screen.Operations.getValueOfField')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callreturn">
+            <mutation name="{{cronapi.screen.Operations.getValueOfField}}" return-raw-type="cronapi.Var">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Campo"/>
+            </mutation>
+            <value name="ARG0">
+              <block asynccall="false" colour="#934848" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="l0]OcQZlYI0{Z^:E{Cr]" origintype="form_fieldscreen_callreturn" output="true" type="form_fieldscreen_callreturn">
+                <field customattributes="" name="SELECT">Reserva.active.emailResponsavelEvento</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="kpbn69BXDq)$~[fjOh/C" multilayer="false" namespace="cronapi.email.Operations.sendEmail" origintype="procedures_callnoreturn" output="false" returntype="ObjectType.VOID" tooltip="%3Cdiv%20class=%22name%22%3E%3Cstrong%3ENome:%3C/strong%3E%3Cdiv%3EEnvia%20e-mail%3C/div%3E%3C/div%3E%3Cdiv%20class=%22description%22%3E%3Cstrong%3EDescri%C3%A7%C3%A3o:%3C/strong%3E%3Cdiv%3EFun%C3%A7%C3%A3o%20que%20envia%20e-mail%3C/div%3E%3C/div%3E%3Cdiv%20class=%22params%22%3E%3Cstrong%3EParam%C3%AAtro:%3C/strong%3E%3Cdiv%3E%3Cspan%3E%20-%20De%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Para%20:%20Texto%3C/span%3E%3Cdiv%3E%20Pode%20receber%20um%20%C3%BAnico%20ou%20uma%20lista%20de%20destinat%C3%A1rios%3C/div%3E%3Cspan%3E%20-%20Com%20c%C3%B3pia%20:%20Texto%3C/span%3E%3Cdiv%3E%20Um%20%C3%BAnico%20campo%20texto%20ou%20uma%20lista%20de%20destinat%C3%A1rios%3C/div%3E%3Cspan%3E%20-%20Com%20c%C3%B3pia%20oculta%20:%20Texto%3C/span%3E%3Cdiv%3E%20Um%20%C3%BAnico%20campo%20texto%20ou%20uma%20lista%20de%20textos%3C/div%3E%3Cspan%3E%20-%20Assunto%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Mensagem%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Conte%C3%BAdo%20HTML%20:%20Texto%3C/span%3E%3Cdiv%3EEnvia%20mensagem%20com%20o%20conte%C3%BAdo%20do%20HTML%3C/div%3E%3Cspan%3E%20-%20Anexo(s)%20:%20Texto%3C/span%3E%3Cdiv%3E%20Caminho%20absoluto%20do%20anexo,%20ou%20lista%20com%20caminhos%20dos%20anexos%3C/div%3E%3Cspan%3E%20-%20Hospedeiro%20SMTP%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Porta%20SMTP%20:%20Texto%3C/span%3E%3Cbr%3E%3Cspan%3E%20-%20Login%20:%20Texto%3C/span%3E%3Cdiv%3E%20Login%20para%20autentica%C3%A7%C3%A3o%20no%20hospedeiro%20SMTP%3C/div%3E%3Cspan%3E%20-%20Senha%20:%20Texto%3C/span%3E%3Cdiv%3E%20Senha%20para%20autentica%C3%A7%C3%A3o%20no%20hospedeiro%20SMTP%3C/div%3E%3Cspan%3E%20-%20Protocolo%20:%20Texto%3C/span%3E%3Cdiv%3ETipo%20de%20protocolo%20para%20envio%20de%20e-mail%20no%20SMTP.%3C/div%3E%3C/div%3E%3C/div%3E%3Cdiv%20class=%22link%22%3E%3Cstrong%3EAjuda:%3C/strong%3E%3Cdiv%20class=%22tooltip-link%22%3E%3Ca%20onclick=%22Blockly.Search.goToDoc('http://172.16.2.97:80/help?type=blockly&amp;amp;id=cronapi.email.Operations.sendEmail','cronapi.email.Operations.sendEmail')%22%20href=%22javascript:void(0)%22%3EAjuda%3C/a%3E%3C/div%3E%3C/div%3E" type="procedures_callnoreturn">
+            <mutation name="{{cronapi.email.Operations.sendEmail}}" return-raw-type="void">
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="De"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Para"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Com cópia"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Com cópia oculta"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Assunto"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Mensagem"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Conteúdo HTML"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Anexo(s)"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Hospedeiro SMTP"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Porta SMTP"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Login"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Senha"/>
+              <arg cronapi-raw-type="cronapi.Var" cronapi-type="ObjectType.STRING" name="Protocolo"/>
+            </mutation>
+            <value name="ARG0">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="j_#3w]I$RpTIw_J}T~#Y" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">reservadesalas@fieb.org.br</field>
+              </shadow>
+            </value>
+            <value name="ARG1">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="4/H3_!UFhZuy!^k$:o^%" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+              <block asynccall="false" colour="#0088ee" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="pZ%YfkRB,FJaTgp7?tut" origintype="variables_get" output="true" tooltip="Retorna o valor desta variável." type="variables_get">
+                <field customattributes="" name="VAR">emailSolicitante</field>
+              </block>
+            </value>
+            <value name="ARG2">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="#}!F/5lb]3Dq8=7JiD4(" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">breno.albergaria@fieb.org.br</field>
+              </shadow>
+            </value>
+            <value name="ARG3">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="P^K6qGPbxG$/hp_~CPd(" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="ARG4">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="i0me4c,CkL-@n@.BB/Yn" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Confirmação de Reserva</field>
+              </shadow>
+            </value>
+            <value name="ARG5">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="[}k^ZzzC|ZLu07Qjly3C" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Prezado(a), 
+A sua reserva foi concluida com sucesso!
+
+Atenciosamente,</field>
+              </shadow>
+            </value>
+            <value name="ARG6">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="IE]3$I|UMexiZckBakWq" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">Prezado(a), 
+A sua reserva foi concluida com sucesso!
+
+Atenciosamente,</field>
+              </shadow>
+            </value>
+            <value name="ARG7">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="2wHJ1;k_LZUJasGO0-pX" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="ARG8">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="OK!AI81Iz(gJ[pG]Ne(z" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">mailing.fieb.org.br</field>
+              </shadow>
+            </value>
+            <value name="ARG9">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="8O[fEout$1CgY:p-E/FS" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">25</field>
+              </shadow>
+            </value>
+            <value name="ARG10">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="Y@rLzn*YKTj~I@d~zC3w" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT">reservadesalas@fieb.org.br</field>
+              </shadow>
+            </value>
+            <value name="ARG11">
+              <shadow asynccall="false" colour="#5ba593" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="[=n}#VFr!Dn,=4PiMLqV" origintype="text" output="true" tooltip="function () { [native code] }" type="text">
+                <field customattributes="" name="TEXT"/>
+              </shadow>
+            </value>
+            <value name="ARG12">
+              <block asynccall="false" colour="#995ba5" datasourcetype="" dependencyby="*nuI0l]Tl2gH?2ERBzvW" id="sH?,LS~_[R`;-JuNT7k9" origintype="util_dropdown" output="true" type="util_dropdown">
+                <mutation>
+                  <arg name="SSL" value="SSL"/>
+                  <arg name="TLS" value="TLS"/>
+                  <arg name="TLSv1" value="TLS v1.0"/>
+                  <arg name="TLSv1.1" value="TLS v1.1"/>
+                  <arg name="TLSv1.2" value="TLS v1.2"/>
+                  <arg name="PLAIN" value="PLAIN"/>
+                </mutation>
+                <field customattributes="" name="SELECT">PLAIN</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </statement>
+  </block>
+</blockly>

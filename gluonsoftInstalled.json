@@ -1,0 +1,33 @@
+[
+  {
+    "gluonsoftId": "00000000-D41D8CD98F00B204E9800998ECF8427E",
+    "versionId": "00000000-D41D8CD98F00B204E9800998ECF8427E",
+    "name": "",
+    "version": "--",
+    "dateAdded": "--"
+  },
+  {
+    "gluonsoftId": "6520344C-2A3A-4928-A2AD-364189FEFBF4",
+    "versionId": "14A1BDCF-209D-4961-96E4-ED00118A818B",
+    "name": "Telegram Bot",
+    "version": "2.9.6-SP.40",
+    "dateAdded": "2024-09-11 20:23:40",
+    "filesMerged": [
+      {
+        "name": "pom.xml",
+        "path": "/pom.xml",
+        "mavenDependecies": [
+          {
+            "artifactId": "cronapp-framework-telegram",
+            "classifier": null,
+            "groupId": "io.cronapp",
+            "scope": null,
+            "systemPath": null,
+            "type": null,
+            "version": "2.9.6-SP.40"
+          }
+        ]
+      }
+    ]
+  }
+]

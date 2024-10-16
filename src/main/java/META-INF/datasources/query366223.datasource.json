@@ -1,0 +1,163 @@
+{
+  "customId": "getAprovacaoStatus",
+  "queryName": "getAprovacaoStatus",
+  "sourceType": "entityFullName",
+  "baseEntity": null,
+  "blockly": null,
+  "entitySimpleName": "Aprovacao",
+  "entityFullName": "app.entity.Aprovacao",
+  "query": {
+    "isValid": true,
+    "rulesEntity": [
+      {
+        "entity": "Aprovacao",
+        "alias": "a",
+        "namespace": "app.entity.Aprovacao"
+      }
+    ],
+    "rulesSelect": [
+      {
+        "func": "get",
+        "field": "a"
+      }
+    ],
+    "rulesGroupBy": [],
+    "rulesHaving": [],
+    "rulesOrderBy": [],
+    "rules": {
+      "condition": "AND",
+      "not": false,
+      "valid": true,
+      "rules": []
+    }
+  },
+  "queryParamsValues": [],
+  "verbs": {
+    "GET": true,
+    "GETAuthorities": null,
+    "POST": true,
+    "POSTAuthorities": null,
+    "PUT": true,
+    "PUTAuthorities": null,
+    "DELETE": true,
+    "DELETEAuthorities": null,
+    "FILTER": true,
+    "FILTERAuthorities": null,
+    "COUNT": true,
+    "COUNTAuthorities": null
+  },
+  "events": {
+    "beforeInsert": null,
+    "beforeUpdate": null,
+    "beforeDelete": null,
+    "afterInsert": null,
+    "afterUpdate": null,
+    "afterDelete": null,
+    "onNavigate": null,
+    "onAuthorize": null,
+    "onError": null
+  },
+  "defaultValues": {
+    "id": null,
+    "reserva": null,
+    "data_Aprovacao": null,
+    "status": null,
+    "motivo_reprovacao": null,
+    "reserva_nomeEvento": null
+  },
+  "defaultValuesProperties": {
+    "id": null,
+    "reserva": null,
+    "data_Aprovacao": null,
+    "status": null,
+    "motivo_reprovacao": null,
+    "reserva_nomeEvento": null
+  },
+  "security": {
+    "id": null,
+    "reserva": null,
+    "data_Aprovacao": null,
+    "status": null,
+    "motivo_reprovacao": null,
+    "reserva_nomeEvento": null
+  },
+  "calcFields": {
+    "StatusTexto": {
+      "type": "server",
+      "blocklyMethod": "getStatusFonte",
+      "blocklyClass": "blockly.AprovacaoController",
+      "blocklyLanguage": "java",
+      "blocklyParams": [
+        {
+          "id": "bd910511",
+          "name": "aprovacaoDado\u0026lt;app.entity.Aprovacao\u0026gt;",
+          "value": "data",
+          "type": "CUSTOM"
+        }
+      ],
+      "blocklyJson": {
+        "namespace": "blockly.AprovacaoController",
+        "sourcePath": "src/main/java/blockly/aprovacaoController.blockly",
+        "language": "java",
+        "methods": [
+          {
+            "name": "getStatus",
+            "hasReturn": "true",
+            "params": [
+              "status"
+            ]
+          },
+          {
+            "name": "aprovarReserva",
+            "hasReturn": "false",
+            "params": [
+              "idAprovacao"
+            ]
+          },
+          {
+            "name": "negarReserva",
+            "hasReturn": "false",
+            "params": [
+              "idAprovacao"
+            ]
+          },
+          {
+            "name": "atualizarFonte",
+            "hasReturn": "false",
+            "params": []
+          },
+          {
+            "name": "getStatusFonte",
+            "hasReturn": "true",
+            "params": [
+              "aprovacaoDado\u0026lt;app.entity.Aprovacao\u0026gt;"
+            ]
+          }
+        ]
+      },
+      "blocklyGETMethod": null,
+      "blocklyPOSTMethod": null,
+      "blocklyPUTMethod": null,
+      "blocklyDELETEMethod": null,
+      "blocklyFILTERMethod": null,
+      "blocklyCOUNTMethod": null
+    }
+  },
+  "calcFieldsSecurity": {
+    "StatusTexto": null
+  },
+  "calcFieldsProperties": {
+    "StatusTexto": {
+      "type": "String"
+    }
+  },
+  "headers": {},
+  "errorHandles": {
+    "primaryKey": null,
+    "foreignKey": null
+  },
+  "serviceUrl": "api/cronapi/odata/v2/app/query366223/",
+  "audit": false,
+  "swagger": false,
+  "library": false
+}
