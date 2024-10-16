@@ -158,8 +158,9 @@
             <version>2.9.6-SP.40</version>
         </dependency>
         <dependency>
-            <groupId>sql-server</groupId>
-            <artifactId>sql-server-jdbc</artifactId>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>9.4.1.jre11</version>
         </dependency>
     </dependencies>
     <properties>
